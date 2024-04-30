@@ -1,5 +1,5 @@
 # Use the specified image as the base
-FROM python:3.10-slim-bullseye as release
+FROM --platform=linux/amd64 python:3.10-slim-bullseye as release
 
 # Set environment variables for Poetry
 ENV POETRY_VERSION=1.6.1
@@ -25,5 +25,3 @@ COPY . /app
 # Give execution permission to your shell script
 RUN chmod +x /app/deploy/entrypoint.sh
 
-# Run your shell script
-CMD ["/app/deploy/entrypoint.sh"]
