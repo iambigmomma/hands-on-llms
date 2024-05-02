@@ -122,7 +122,7 @@ class ContextExtractorChain(Chain):
         # (or other time frame).
         matches = self.vector_store.search(
             query_vector=embeddings,
-            k=self.top_k,
+            # k=self.top_k,
             collection_name=self.vector_collection,
         )
 

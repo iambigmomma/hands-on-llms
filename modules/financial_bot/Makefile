@@ -50,6 +50,11 @@ run_ui_dev:
 
 	poetry run gradio tools/ui.py --debug
 
+run_ui_api:
+	@echo "Running financial_bot UI and called REST API from Beam..."
+
+	poetry run python -m tools.ui_api
+
 
 # === Beam ===
 
